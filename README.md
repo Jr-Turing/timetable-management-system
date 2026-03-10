@@ -316,7 +316,7 @@ This project was developed as part of an academic initiative to modernize univer
 
 <div align="center">
 
-**Made with ❤️ by [Your Team Name] | BBIT**
+**Made with ❤️ by Team Blue | BBIT**
 
 ⭐ *If you found this project helpful, please give it a star!* ⭐
 

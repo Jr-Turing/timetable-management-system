@@ -284,11 +284,11 @@ python manage.py runserver
 
 | Name | Role | Responsibilities |
 |------|------|-----------------|
-| **[Your Name]** | 🏗 Project Lead / Backend Developer | System architecture, project coordination, backend API development, database schema & integration |
-| **[Member 2]** |  ⚙️ Backend Developer | REST API endpoints, database models, authentication system, timetable conflict detection |
-| **[Member 3]** | 🎨 Frontend Developer | Student dashboard UI, timetable view, notification display, responsive design |
-| **[Member 4]** | 🎨 Frontend Developer | Teacher dashboard, notice board module, attendance marking UI, real-time notifications |
-| **[Member 5]** | 🧪 Testing & Documentation | Admin panel development, user & course management, system testing, bug fixing & documentation |
+| **Parthapratim Rana** | 🏗 Project Lead / Backend Developer | System architecture, project coordination, backend API development, database schema & integration |
+| **Arvind Kumar** |  ⚙️ Backend Developer | REST API endpoints, database models, authentication system, timetable conflict detection |
+| **Sumit Kumar** | 🎨 Frontend Developer | Student dashboard UI, timetable view, notification display, responsive design |
+| **Priya Ghosh** | 🎨 Frontend Developer | Teacher dashboard, notice board module, attendance marking UI, real-time notifications |
+| **Shubham Srivastava** | 🧪 Testing & Documentation | Admin panel development, user & course management, system testing, bug fixing & documentation |
 
 ---
 ## 📌 Future Enhancements

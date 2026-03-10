@@ -5,7 +5,7 @@
 <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" />
 <img src="https://img.shields.io/badge/PRs-Welcome-orange?style=for-the-badge" />
 
-# 🎓 Smart University Timetable Management System
+# 🎓 Timetable Management System
 
 **A full-stack web application designed to automate and streamline university scheduling with role-based dashboards for Admins, Teachers, and Students.**
 
@@ -17,7 +17,7 @@
 
 ## 📌 Project Overview
 
-The **Smart University Timetable Management System** automates the process of creating, managing, and monitoring university schedules. It provides a centralized platform that eliminates manual scheduling errors, prevents timetable conflicts, and improves communication across all academic roles.
+The **Timetable Management System** automates the process of creating, managing, and monitoring university schedules. It provides a centralized platform that eliminates manual scheduling errors, prevents timetable conflicts, and improves communication across all academic roles.
 
 | Role | Key Capability |
 |------|---------------|

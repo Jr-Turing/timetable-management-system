@@ -242,7 +242,7 @@ python manage.py runserver
 > *Date: 27 FEB 2026 | Attendees: All Team Members*
 
 <!-- 📎 Add your meeting screenshot below -->
-![Meeting 1 - Project Kickoff](./docs/meeting-1.jpeg)
+![Meeting 1 - Project Kickoff](./Docs/meeting-1.jpeg)
 
 *Caption: Initial project planning session — defining scope, assigning roles, and establishing the project timeline.*
 
@@ -253,7 +253,7 @@ python manage.py runserver
 > *Date: 3 MAR 2026 | Attendees: All Team Members*
 
 <!-- 📎 Add your meeting screenshot below -->
-![Meeting 2 - Architecture Design](./docs/meeting-2.jpeg)
+![Meeting 2 - Architecture Design](./Docs/meeting-2.jpeg)
 
 *Caption: Team discussion on system architecture, database schema design, and API structure.*
 
@@ -264,7 +264,7 @@ python manage.py runserver
 > *Date: [Add Date] | Attendees: All Team Members*
 
 <!-- 📎 Add your meeting screenshot below -->
-![Meeting 3 - Progress Review](./docs/meeting-3.png)
+![Meeting 3 - Progress Review](./Docs/meeting-3.png)
 
 *Caption: Mid-development review — tracking feature completion, resolving blockers, and integration testing.*
 
@@ -275,7 +275,7 @@ python manage.py runserver
 > *Date: [Add Date] | Attendees: All Team Members*
 
 <!-- 📎 Add your meeting screenshot below -->
-![Meeting 4 - Final Review](./docs/meeting-4.png)
+![Meeting 4 - Final Review](./Docs/meeting-4.png)
 
 *Caption: Final testing session — bug fixing, UI polish, and preparing project documentation for submission.*
 

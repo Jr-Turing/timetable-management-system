@@ -176,8 +176,8 @@ timetable-management-system/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/smart-university-timetable-management-system.git
-cd smart-university-timetable-management-system
+git clone https://github.com/Jr-turing/timetable-management-system.git
+cd timetable-management-system
 ```
 
 ### 2. Create & Activate a Virtual Environment

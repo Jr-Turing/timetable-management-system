@@ -1,312 +1,342 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge" />
-<img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" />
-<img src="https://img.shields.io/badge/PRs-Welcome-orange?style=for-the-badge" />
+# 📅 Time Table Management System (TMS)
 
-# 🎓 Smart University Timetable Management System
+### A Modern University Timetable Management System built with **FastAPI**, **NiceGUI**, **SQLModel**, and **PostgreSQL**
 
-**A full-stack web application designed to automate and streamline university scheduling with role-based dashboards for Admins, Teachers, and Students.**
+<p align="center">
 
-[📖 Documentation](#-project-overview) • [🚀 Getting Started](#-installation-guide) • [👥 Team](#-team-members) • [📸 Meetings](#-group-meeting-documentation)
+<img src="https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white">
+<img src="https://img.shields.io/badge/NiceGUI-Modern_UI-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white">
+<img src="https://img.shields.io/badge/SQLModel-ORM-orange?style=for-the-badge">
+<img src="https://img.shields.io/badge/ReportLab-PDF-red?style=for-the-badge">
+<img src="https://img.shields.io/badge/MIT-License-green?style=for-the-badge">
+<img src="https://img.shields.io/badge/Version-2.0-blue?style=for-the-badge">
+
+</p>
+
+A role-based timetable management system that helps educational institutions efficiently manage class schedules, teachers, students, and subjects through an intuitive web interface.
 
 ---
+
+### 🔗 Quick Links
+
+[✨ Features](#-features) •
+[🛠 Tech Stack](#-technology-stack) •
+[🏗 Architecture](#-system-architecture) •
+[🚀 Installation](#-installation) •
+[📂 Project Structure](#-project-structure) •
+[👥 Team](#-team-members)
 
 </div>
 
-## 📌 Project Overview
+---
 
-The **Smart University Timetable Management System** automates the process of creating, managing, and monitoring university schedules. It provides a centralized platform that eliminates manual scheduling errors, prevents timetable conflicts, and improves communication across all academic roles.
+# 📖 Project Overview
 
-| Role | Key Capability |
-|------|---------------|
-| 🛠 **Admin** | Full control over timetables, courses, users & rooms |
-| 👨‍🏫 **Teacher** | Post notices, manage schedules, mark attendance |
-| 🎓 **Student** | View timetables, receive real-time notifications |
+The **Time Table Management System (TMS)** is a full-stack web application developed to simplify timetable management for educational institutions.
+
+Instead of manually preparing class schedules, administrators can efficiently create and manage timetables while teachers and students can access their schedules through dedicated dashboards.
+
+The application is built using modern Python technologies including **FastAPI**, **NiceGUI**, **SQLModel**, and **PostgreSQL**.
 
 ---
 
-## 🎯 Objectives
+# ✨ Features
 
-- ⚡ Automate timetable generation and conflict detection
-- 🔒 Prevent scheduling overlaps (teacher/room double-booking)
-- 📢 Improve communication between teachers and students
-- 🗂 Provide a structured, centralized academic management system
+## 👨‍💼 Admin
 
----
-
-## 👥 User Roles & Features
-
-### 🎓 Student Dashboard
-- View personal timetable by day/week
-- View assigned courses and teachers
-- Receive real-time notifications
-- Access the notice board
-- View attendance records *(optional)*
-
-### 👨‍🏫 Teacher Dashboard
-- View full department timetable
-- Post academic notices (cancellations, extra classes, assignments)
-- Mark student attendance
-- Apply for leave
-- Notify assigned students in real-time
-
-### 🛠 Admin Dashboard
-- Create, edit, and delete timetables
-- Manage courses, teachers, and student records
-- Assign subjects to rooms and teachers
-- Detect and resolve scheduling conflicts automatically
-- View all departmental schedules in a unified interface
+- Secure Login
+- Dashboard
+- Add / Edit / Delete Teachers
+- Add / Edit / Delete Students
+- Manage Subjects
+- Create Timetables
+- Update Timetables
+- Delete Timetables
+- Export Timetable as PDF
 
 ---
 
-## 🔔 Post Notice Module
+## 👨‍🏫 Teacher
 
-Teachers can publish academic notices including:
+- Secure Login
+- View Personal Timetable
+- Semester-wise Timetable Filter
+- Send Notice *(UI Only)*
 
-| Notice Type | Description |
-|-------------|-------------|
-| 🚫 Class Cancellation | Notify students of a cancelled class |
-| ➕ Extra Class | Announce additional sessions |
-| 📝 Assignment Deadline | Share task due dates |
-| 📋 Exam Update | Communicate exam-related changes |
+---
 
-**Notice Workflow:**
+## 👨‍🎓 Student
+
+- Secure Login
+- View Class Routine
+- Export Timetable as PDF
+
+---
+
+## 📄 PDF Export
+
+- Professional timetable layout
+- Landscape A4 format
+- Weekly schedule
+- Printable PDF
+
+---
+
+# 🛠 Technology Stack
+
+| Category | Technology |
+|----------|------------|
+| Programming Language | Python 3.12 |
+| Backend Framework | FastAPI |
+| Frontend Framework | NiceGUI |
+| ORM | SQLModel |
+| Database | PostgreSQL |
+| PDF Generator | ReportLab |
+| Package Manager | uv |
+| API Documentation | Swagger UI |
+
+---
+
+# 🏗 System Architecture
 
 ```
-Teacher → Submit Notice → Data Validation → Save to Database
-    → Notify Students → Update Dashboard → Mark as Read
+                    +----------------------+
+                    |      NiceGUI UI      |
+                    |      (Frontend)      |
+                    +----------+-----------+
+                               |
+                               |
+                      FastAPI Application
+                           (Backend)
+                               |
+              +----------------+----------------+
+              |                                 |
+      Business Services                     API Routes
+              |                                 |
+              +----------------+----------------+
+                               |
+                         SQLModel ORM
+                               |
+                      PostgreSQL Database
 ```
 
 ---
 
-## 🏗 System Architecture
+# 📂 Project Structure
 
-The system follows a **3-Tier Architecture**:
-
-```
-┌─────────────────────────────────────┐
-│     Presentation Layer (Frontend)    │  ← HTML, CSS, JavaScript
-├─────────────────────────────────────┤
-│     Application Layer (Backend API)  │  ← Python (Django / FastAPI)
-├─────────────────────────────────────┤
-│     Database Layer (Data Storage)    │  ← MySQL / SQLite
-└─────────────────────────────────────┘
-```
-
----
-
-## 🗄 Database Schema
-
-The system uses the following core tables/collections:
-
-| Table | Purpose |
-|-------|---------|
-| `Users` | Authentication & role management |
-| `Students` | Student profile data |
-| `Teachers` | Teacher profile & department info |
-| `Courses` | Course catalog |
-| `Departments` | Faculty & department records |
-| `Rooms` | Classroom availability |
-| `Timetable` | Schedule entries |
-| `Notices` | Posted announcements |
-| `Attendance` | Attendance logs |
-| `Notifications` | Real-time alert records |
-
----
-
-## 🛠 Technology Stack
-
-| Layer | Technology |
-|-------|-----------|
-| **Programming Language** | Python |
-| **Backend Framework** | Django / FastAPI |
-| **Frontend** | HTML, CSS, JavaScript |
-| **Database** | MySQL / SQLite |
-| **Authentication** | Django Auth |
-| **Version Control** | Git & GitHub |
-| **Development Tools** | VS Code |
-
----
-
-## 📂 Project Structure
-
-```
-timetable-management-system/
+```text
+TMS/
 │
-├── 📁 templates/               # HTML templates (Jinja2 / Django templates)
-│   ├── admin/                  # Admin dashboard pages
-│   ├── teacher/                # Teacher dashboard pages
-│   └── student/                # Student dashboard pages
+├── app/
+│   │
+│   ├── assets/                    # Frontend Assets
+│   │   ├── bbit_logo.png          # BBIT Logo used in UI
+│   │   └── ...
+│   │
+│   ├── ui/                        # Frontend (NiceGUI Pages)
+│   │   ├── login.py
+│   │   ├── dashboard.py
+│   │   ├── admin.py
+│   │   ├── teacher.py
+│   │   ├── student.py
+│   │   └── timetable.py
+│   │
+│   ├── routes/                    # Backend API Routes
+│   │   ├── admin.py
+│   │   ├── teacher.py
+│   │   ├── student.py
+│   │   ├── timetable.py
+│   │   └── pdf.py
+│   │
+│   ├── services/                  # Backend Business Logic
+│   │   ├── timetable_service.py
+│   │   └── pdf_service.py
+│   │
+│   ├── database.py                # Database Configuration
+│   ├── models.py                  # SQLModel Models
+│   ├── schemas.py                 # Request / Response Schemas
+│   ├── seed_data.py               # Demo Data Generator
+│   ├── utils/                     # Helper Functions
+│   └── main.py                    # Application Entry Point
 │
-├── 📁 static/                  # Frontend assets
-│   ├── css/                    # Stylesheets
-│   ├── js/                     # JavaScript files
-│   └── images/                 # Icons & images
-│
-├── 📁 timetable/               # Core Django app
-│   ├── models.py               # Database models
-│   ├── views.py                # Request handlers
-│   ├── urls.py                 # URL routing
-│   ├── forms.py                # Django forms
-│   └── admin.py                # Admin panel config
-│
-├── 📁 notices/                 # Notice module app
-├── 📁 attendance/              # Attendance module app
-├── 📁 users/                   # Auth & user management
-├── 📁 docs/                    # Documentation & diagrams
-│   └── meetings/               # Group meeting screenshots
-│
-├── manage.py                   # Django management script
-├── requirements.txt            # Python dependencies
-├── .env.example
-└── README.md
+├── pyproject.toml
+├── uv.lock
+├── requirements.txt
+├── README.md
+└── .env
 ```
 
 ---
 
-## 🚀 Installation Guide
+# 🖥 Frontend
 
-### Prerequisites
-- Python 3.10+
-- MySQL or SQLite
-- Git
-- VS Code (recommended)
+The frontend is built using **NiceGUI**, allowing responsive and interactive web pages directly in Python.
 
-### 1. Clone the Repository
+### Frontend Components
+
+- Login Page
+- Admin Dashboard
+- Teacher Dashboard
+- Student Dashboard
+- Timetable View
+- Forms
+- Navigation
+- PDF Download Buttons
+- BBIT Branding (Logo)
+
+```
+⚙ Backend
+
+The backend is powered by **FastAPI**.
+
+### Backend Responsibilities
+
+- Authentication
+- CRUD Operations
+- Timetable Management
+- Subject Management
+- Teacher Management
+- Student Management
+- PDF Generation
+- Database Operations
+- API Endpoints
+
+🗄 Database
+
+The application uses **PostgreSQL** together with **SQLModel ORM**.
+
+Current Models include
+
+- Teachers
+- Students
+- Subjects
+- Timetable
+```
+
+---
+
+# 🚀 Installation
+
+## 1️⃣ Clone Repository
+
 ```bash
-git clone https://github.com/your-username/smart-university-timetable-management-system.git
-cd smart-university-timetable-management-system
+git clone https://github.com/Jr-turing/timetable-management-system.git
+cd timetable-management-system
 ```
 
-### 2. Create & Activate a Virtual Environment
+---
+
+## 2️⃣ Install uv
+
 ```bash
-python -m venv venv
-
-# On Windows
-venv\Scripts\activate
-
-# On macOS/Linux
-source venv/bin/activate
+pip install uv
 ```
 
-### 3. Install Dependencies
+---
+
+## 3️⃣ Create Virtual Environment
+
 ```bash
-pip install -r requirements.txt
+uv venv
 ```
 
-### 4. Configure Environment Variables
+Windows
+
 ```bash
-cp .env.example .env
+.venv\Scripts\activate
 ```
+
+Linux/macOS
+
+```bash
+source .venv/bin/activate
+```
+
+---
+
+## 4️⃣ Install Dependencies
+
+```bash
+uv sync
+```
+
+---
+
+## 5️⃣ Configure Environment Variables
+
+Create a `.env` file
 
 ```env
-SECRET_KEY=your_django_secret_key
-DEBUG=True
-DB_NAME=timetable_db
-DB_USER=your_mysql_username
-DB_PASSWORD=your_mysql_password
-DB_HOST=localhost
-DB_PORT=3306
+DATABASE_URL=postgresql://username:password@localhost:5432/timetable_db
+
+SECRET_KEY=your-secret-key
 ```
 
-### 5. Apply Migrations
+---
+
+## 6️⃣ Seed Database
+
 ```bash
-python manage.py makemigrations
-python manage.py migrate
+python -m app.seed_data
 ```
 
-### 6. Create Superuser (Admin)
+---
+
+## 7️⃣ Run Application
+
 ```bash
-python manage.py createsuperuser
+uv run python -m app.main
 ```
 
-### 7. Run the Development Server
+or
+
 ```bash
-python manage.py runserver
+python -m app.main
 ```
 
-🌐 The app will be available at `http://127.0.0.1:8000`
+---
+
+# 🌐 Access the Application
+
+| Service | URL |
+|----------|-----|
+| Application | http://127.0.0.1:8000 |
+| Swagger API | http://127.0.0.1:8000/docs |
+| ReDoc | http://127.0.0.1:8000/redoc |
 
 ---
 
-## 📸 Group Meeting Documentation
+# 🚧 Future Improvements
 
-> The following screenshots document our team's collaborative meetings, planning sessions, and development progress throughout the project lifecycle.
-
----
-
-### 📅 Meeting 1 — Project Kickoff & Planning
-
-> *Date: 27 FEB 2026 | Attendees: All Team Members*
-
-<!-- 📎 Add your meeting screenshot below -->
-![Meeting 1 - Project Kickoff](./docs/meeting-1.jpeg)
-
-*Caption: Initial project planning session — defining scope, assigning roles, and establishing the project timeline.*
+- JWT Authentication
+- Role-Based Access Control (RBAC)
+- Teacher Notice Backend
+- Timetable Conflict Detection
+- Dashboard Analytics
+- Docker Support
+- CI/CD Pipeline
+- Dark Mode
 
 ---
 
-### 📅 Meeting 2 — Database & Architecture Design
-
-> *Date: 3 MAR 2026 | Attendees: All Team Members*
-
-<!-- 📎 Add your meeting screenshot below -->
-![Meeting 2 - Architecture Design](./docs/meeting-2.jpeg)
-
-*Caption: Team discussion on system architecture, database schema design, and API structure.*
-
----
-
-### 📅 Meeting 3 — Development Progress Review
-
-> *Date: [Add Date] | Attendees: All Team Members*
-
-<!-- 📎 Add your meeting screenshot below -->
-![Meeting 3 - Progress Review](./docs/meeting-3.png)
-
-*Caption: Mid-development review — tracking feature completion, resolving blockers, and integration testing.*
-
----
-
-### 📅 Meeting 4 — Testing & Final Review
-
-> *Date: [Add Date] | Attendees: All Team Members*
-
-<!-- 📎 Add your meeting screenshot below -->
-![Meeting 4 - Final Review](./docs/meeting-4.png)
-
-*Caption: Final testing session — bug fixing, UI polish, and preparing project documentation for submission.*
-
----
 ## 👥 Team Members
 
-| Name | Role | Responsibilities |
-|------|------|-----------------|
-| **[Your Name]** | 🏗 Project Lead / Backend Developer | System architecture, project coordination, backend API development, database schema & integration |
-| **[Member 2]** |  ⚙️ Backend Developer | REST API endpoints, database models, authentication system, timetable conflict detection |
-| **[Member 3]** | 🎨 Frontend Developer | Student dashboard UI, timetable view, notification display, responsive design |
-| **[Member 4]** | 🎨 Frontend Developer | Teacher dashboard, notice board module, attendance marking UI, real-time notifications |
-| **[Member 5]** | 🧪 Testing & Documentation | Admin panel development, user & course management, system testing, bug fixing & documentation |
-
----
-## 📌 Future Enhancements
-
-- [ ] 🤖 Automatic AI-Powered Timetable Generator
-- [ ] 📱 Mobile Application (React Native)
-- [ ] 📧 Email Notification Integration
-- [ ] 📷 QR Code Attendance System
-- [ ] 📊 Analytics Dashboard for Admin
-- [ ] 🌐 Multi-Language Support
-
+| Name | Role |
+|------|------|
+| **[Parthapratim Rana](https://github.com/partha811)** | Project Lead/ Backend Developer |
+| **[Arvind Kumar](https://github.com/Jr-Turing)** | Backend Developer |
+| **[Sumit Kumar](https://github.com/sumitkumar-04)** | Frontend Developer |
+| **[Priya Ghosh](https://github.com/priya98000ghosh-lab)** | Frontend Developer |
+| **[Shubham Srivastava](https://github.com/shubhamsrivastava08)** | Testing & Documentation |
 ---
 
 ## 📜 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
 
 ## ⭐ Acknowledgment
 
@@ -316,7 +346,7 @@ This project was developed as part of an academic initiative to modernize univer
 
 <div align="center">
 
-**Made with ❤️ by [Your Team Name] | BBIT**
+**Made with ❤️ by Team Blue | BBIT**
 
 ⭐ *If you found this project helpful, please give it a star!* ⭐
 

@@ -249,8 +249,8 @@ The frontend is built using **NiceGUI**, allowing responsive and interactive web
 - PDF Download Buttons
 - BBIT Branding (Logo)
 
-```
-⚙ Backend
+
+# ⚙ Backend
 
 The backend is powered by **FastAPI**.
 
@@ -266,7 +266,7 @@ The backend is powered by **FastAPI**.
 - Database Operations
 - API Endpoints
 
-🗄 Database
+# 🗄 Database
 
 The application uses **PostgreSQL** together with **SQLModel ORM**.
 
@@ -276,9 +276,6 @@ Current Models include
 - Students
 - Subjects
 - Timetable
-```
-
----
 
 # 🚀 Installation
 

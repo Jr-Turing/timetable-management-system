@@ -46,6 +46,36 @@ The application is built using modern Python technologies including **FastAPI**,
 
 # ✨ Features
 
+## 🔐 Login Page
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### Authentication
+
+- Secure Login
+- Role-based Authentication
+- Admin Login
+- Teacher Login
+- Student Login
+- Password Validation
+- User-friendly Interface
+
+</td>
+
+<td width="50%" align="center">
+
+<img src="Docs/login_page.png" alt="Login Page"/>
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
 ## 👨‍💼 Admin
 
 - Secure Login
@@ -58,24 +88,55 @@ The application is built using modern Python technologies including **FastAPI**,
 - Delete Timetables
 - Export Timetable as PDF
 
----
+</td>
+
+<td width="50%" align="center">
+
+<img src="Docs/admin.png" />
+
+</td>
+</tr>
+</table>
 
 ## 👨‍🏫 Teacher
+<table>
+<tr>
+<td width="50%" valign="top">
 
 - Secure Login
 - View Personal Timetable
 - Semester-wise Timetable Filter
 - Send Notice *(UI Only)*
 
----
+</td>
+
+<td width="%"50 align="center">
+
+<img src="Docs/teacher.png" />
+
+</td>
+</tr>
+</table>
 
 ## 👨‍🎓 Student
-
+<table>
+<tr>
+<td width="50%" valign="top">
+  
 - Secure Login
 - View Class Routine
 - Export Timetable as PDF
 
----
+</td>
+
+<td width="50%" align="center">
+
+<img src="Docs/student.png" />
+
+</td>
+</tr>
+</table>
+
 
 ## 📄 PDF Export
 

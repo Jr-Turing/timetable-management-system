@@ -1,0 +1,15 @@
+[project]
+name = "timetable-management-system"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi==0.115.0",
+    "nicegui==2.9.0",
+    "psycopg2-binary>=2.9.10",
+    "python-multipart==0.0.18",
+    "reportlab==4.2.5",
+    "sqlmodel==0.0.22",
+    "uvicorn[standard]==0.32.0",
+]

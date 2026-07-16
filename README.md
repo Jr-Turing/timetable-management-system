@@ -66,7 +66,7 @@ The application is built using modern Python technologies including **FastAPI**,
 
 <td width="50%" align="center">
 
-<img src="Docs/login_page.png" alt="Login Page"/>
+<img src="assets/login_page.png" alt="Login Page"/>
 
 </td>
 </tr>
@@ -92,7 +92,7 @@ The application is built using modern Python technologies including **FastAPI**,
 
 <td width="50%" align="center">
 
-<img src="Docs/admin.png" />
+<img src="assets/admin.png" />
 
 </td>
 </tr>
@@ -112,7 +112,7 @@ The application is built using modern Python technologies including **FastAPI**,
 
 <td width="%"50 align="center">
 
-<img src="Docs/teacher.png" />
+<img src="assets/teacher.png" />
 
 </td>
 </tr>
@@ -131,7 +131,7 @@ The application is built using modern Python technologies including **FastAPI**,
 
 <td width="50%" align="center">
 
-<img src="Docs/student.png" />
+<img src="assets/student.png" />
 
 </td>
 </tr>

@@ -19,12 +19,12 @@ from sqlmodel import SQLModel, create_engine, Session
 # local defaults. This means you do not NEED to set environment variables to
 # run the project on your own machine, but you CAN override them if needed
 # (for example, if your PostgreSQL password is different).
-DB_USER = os.getenv("DB_USER", "postgres")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "postgres")
-DB_HOST = os.getenv("DB_HOST", "localhost")
-DB_PORT = os.getenv("DB_PORT", "5432")
-DB_NAME = os.getenv("DB_NAME", "timetable_db")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL environment variable is not set")
+
+engine = create_engine(DATABASE_URL, echo=False)
 # The full database URL used by SQLAlchemy/SQLModel to connect to Postgres.
 DATABASE_URL = os.getenv("DATABASE_URL")
 

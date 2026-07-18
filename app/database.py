@@ -25,21 +25,6 @@ if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL environment variable is not set")
 
 engine = create_engine(DATABASE_URL, echo=False)
-# The full database URL used by SQLAlchemy/SQLModel to connect to Postgres.
-DATABASE_URL = os.getenv("DATABASE_URL")
-
-if not DATABASE_URL:
-    DATABASE_URL = (
-        f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-    )
-
-engine = create_engine(DATABASE_URL, echo=False)
-
-# The "engine" is the object SQLModel uses to talk to the database.
-# echo=False keeps the console clean; set it to True if you want to see
-# every SQL statement that gets executed (useful for learning/debugging).
-engine = create_engine(DATABASE_URL, echo=False)
-
 
 def create_db_and_tables() -> None:
     """

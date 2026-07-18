@@ -26,9 +26,14 @@ DB_PORT = os.getenv("DB_PORT", "5432")
 DB_NAME = os.getenv("DB_NAME", "timetable_db")
 
 # The full database URL used by SQLAlchemy/SQLModel to connect to Postgres.
-DATABASE_URL = (
-    f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-)
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if not DATABASE_URL:
+    DATABASE_URL = (
+        f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+    )
+
+engine = create_engine(DATABASE_URL, echo=False)
 
 # The "engine" is the object SQLModel uses to talk to the database.
 # echo=False keeps the console clean; set it to True if you want to see
